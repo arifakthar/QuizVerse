@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizVerse | Challenge Your Brain</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="quiz-container">
+
+    <header class="quiz-header">
+      <h1>⚡ QuizVerse</h1>
+      <p class="tagline">CHALLENGE YOUR BRAIN</p>
+    </header>
+
+    <!-- Difficulty Selection -->
+    <div id="start-screen">
+      <h2>Choose Your Challenge 🎯</h2>
+      <p>Select your difficulty level</p>
+
+      <div class="difficulty-options">
+        <button class="difficulty-btn easy" data-level="easy">
+          <span class="level-name">🟢 Easy</span>
+          <span class="level-time">15 seconds</span>
+        </button>
+
+        <button class="difficulty-btn medium" data-level="medium">
+          <span class="level-name">🟡 Medium</span>
+          <span class="level-time">10 seconds</span>
+        </button>
+
+        <button class="difficulty-btn hard" data-level="hard">
+          <span class="level-name">🔴 Hard</span>
+          <span class="level-time">7 seconds</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="hide">
+
+      <div class="quiz-info">
+        <p id="difficulty-label">Difficulty: Medium</p>
+        <p id="timer">⏱️ Time: 10s</p>
+        <p id="progress">Question 1 of 5</p>
+      </div>
+
+      <div id="quiz-box">
+        <h2 id="question">Question will appear here</h2>
+
+        <!-- 50/50 Lifeline -->
+        <button id="lifeline-btn" type="button">
+          💡 50/50 Lifeline
+        </button>
+
+        <p id="lifeline-message" aria-live="polite"></p>
+
+        <div id="answer-buttons"></div>
+
+        <p id="feedback" aria-live="polite"></p>
+
+        <button id="next-btn" disabled>
+          Next Question →
+        </button>
+      </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-box" class="hide">
+      <h2>🏆 Quiz Completed!</h2>
+      <p id="final-score"></p>
+      <p id="high-score"></p>
+      <button id="restart-btn">↻ Play Again</button>
+    </div>
+
+    <footer class="quiz-footer">
+      <p>⚡ Think Fast. Learn More. Level Up.</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
